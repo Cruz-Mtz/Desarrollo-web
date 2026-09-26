@@ -1,0 +1,152 @@
+main{
+    display: flex;
+}
+
+body{
+    background-color: #08090D;
+    color: #EEEEEE;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 15px;
+}
+
+#principal {
+    background-color: #0F1117;
+    width: 80%;
+}
+
+
+.galeria {
+    width: auto;
+    padding: auto;
+    background-color: #14161D;
+}
+
+
+.titulo {
+    text-align: center;
+    color: #FCEE0A;
+}
+
+
+.section-galeria {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.galeria-2{
+    display: flex;
+    flex-direction: row;
+    background-color: #0F1117;
+    justify-content: center;
+
+}
+
+.galeria .articulo {
+    background-color: #0F1117;
+    width: 25%;
+    height: 120px;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #FCEE0A;
+}
+
+.articulo{
+    background-color: #0F1117;
+    width: 25%;
+    height: 120px;
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #FCEE0A;
+}
+
+.imagen{
+    width: 100%;
+    height: 100%;
+}
+
+.img-bg {
+    background-image: url("../img/Cyberpunk_Img_1.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.img-bg-2 {
+    background-image: url("../img/En_la_luna_2.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.color-dg{
+    background: linear-gradient(to top, #0F1117, #FF2A6D, #FCEE0A);
+}
+
+.imagen-info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.menu {
+    width: 20%;
+    background-color: #14161D;
+    color: #F2F2F4;
+    padding: 0;
+    border-left: 1px solid #2A2C36;
+    text-align: center;
+}
+
+ol{
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    padding: 15px;
+    list-style: none;
+}
+
+
+.info-iconos ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #08090D;
+    color: #F2F2F4;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+footer a {
+    color: #00E5FF;
+}
+
+footer i{
+    color: #FCEE0A;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.material-symbols-outlined {
+  color: #FCEE0A;
+  font-size: 20px;
+  font-weight: bolder;
+}
