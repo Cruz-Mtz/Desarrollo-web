@@ -1,0 +1,223 @@
+/* Reseteo básico para evitar problemas de dimensiones */
+body {
+    font-family: 'Barlow', sans-serif;
+    background-color: #15151E;
+    color: #FFFFFF;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+h1, h2, h3{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* Contenedor principal */
+main {
+    display: flex;
+    flex: 1;
+    min-height: calc(100vh - 70px);
+    padding: 25px;
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Sección de inicio */
+#Inicio {
+    flex: 1;
+    /* Se agrega un degradado para oscurecer la imagen de fondo */
+    background-image: 
+        linear-gradient(rgba(21, 21, 30, 0.7), rgba(21, 21, 30, 0.7)),
+        url('../img/Max\ Verstappen\ Red\ Bull\ F1\ Qatar\ GP\ 120124.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #30303A;
+    border-radius: 12px;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* Bienvenida */
+.bienvenida {
+    padding: 20px 0;
+}
+
+.bienvenida h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.bienvenida h1 span {
+    display: block;
+    color: #FF1E00;
+}
+
+.descripcion {
+    color: #F7F4F1;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+/* Botón principal */
+.boton-inicio {
+    display: inline-block;
+    background-color: #FF1E00;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 22px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.boton-inicio:hover {
+    background-color: #9d1200;
+    color: #FFFFFF;
+}
+
+/* Tarjetas informativas */
+.informacion {
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.tarjeta {
+    flex: 1;
+    background-color: #20202A;
+    border: 1px solid #30303A;
+    border-radius: 8px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    /* Cambia el color de fondo y agrega una sombra al pasar el mouse */
+    box-shadow: 0 4px 12px rgba(255, 30, 0, 0.5);
+}
+
+.numero {
+    color: #FF1E00;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.tarjeta h2 {
+    font-size: 19px;
+    margin: 15px 0 10px;
+}
+
+.tarjeta p {
+    color: #F7F4F1;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Menú lateral perfectamente alineado */
+.menu {
+    width: 230px;
+    flex-shrink: 0;
+    background-color: #20202A;
+    border: 1px solid #30303A;
+    border-radius: 12px;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.menu h2 {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 27px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.menu-subtitulo {
+    color: #F7F4F1;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+
+.menu nav {
+    width: 100%;
+}
+
+.menu ol {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu li {
+    width: 100%;
+    padding: 14px 20px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s;
+    box-sizing: border-box;
+}
+
+.menu li a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.menu li.seleccionado {
+    background-color: #FF1E00;
+}
+
+.menu li:hover {
+    background-color: #CC1900;
+    font-size: 22px;
+    transition: all 0.3s;
+}
+
+.menu li:hover a {
+    color: #FFFFFF;
+}
+
+/* Footer */
+footer {
+    background-color: #15151E;
+    border-top: 2px solid #FF1E00;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+footer h2,
+footer p,
+footer span {
+    font-size: 12px;
+    color: #F7F4F1;
+}
+
+footer span {
+    color: #FF1E00;
+    font-weight: bold;
+}
+
+

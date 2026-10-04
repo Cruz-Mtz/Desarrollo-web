@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Cruz Emmanuel Mejia Martinez" />
+    <meta name="keywords" content="Desarrollo web, ingenieria de software" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css" />
+    <title>Relaciones</title>
+  </head>
+  <body>
+    <header>
+      <h1>Relaciones</h1>
+    </header>
+
+    <main>
+      <form
+        id="Relaciones"
+        name="datos_usuario"
+        method="post"
+        action="#"
+        enctype="multipart/form-data"
+      >
+        <fieldset class="campo-relacion">
+          <legend>Piloto — Escudería</legend>
+
+          <section class="grupo-select">
+            <select id="piloto">
+              <option value="Max Verstappen">Max Verstappen</option>
+              <option value="Sergio Pérez">Sergio Pérez</option>
+              <option value="Charles Leclerc">Charles Leclerc</option>
+            </select>
+            <label for="piloto">Piloto</label>
+          </section>
+
+          <section class="grupo-select">
+            <select id="escuderia">
+              <option value="Red Bull Racing">Red Bull Racing</option>
+              <option value="Scuderia Ferrari">Scuderia Ferrari</option>
+              <option value="McLaren F1 Team">McLaren F1 Team</option>
+            </select>
+            <label for="escuderia">Escudería</label>
+          </section>
+        </fieldset>
+
+        <fieldset class="campo-relacion">
+          <legend>Compañeros</legend>
+
+          <section class="grupo-select">
+            <select id="piloto1">
+              <option value="Max Verstappen">Max Verstappen</option>
+              <option value="Charles Leclerc">Charles Leclerc</option>
+              <option value="Lando Norris">Lando Norris</option>
+            </select>
+            <label for="piloto1">Piloto 1</label>
+          </section>
+
+          <section class="grupo-select">
+            <select id="piloto2">
+              <option value="Sergio Pérez">Sergio Pérez</option>
+              <option value="Carlos Sainz">Carlos Sainz</option>
+              <option value="Oscar Piastri">Oscar Piastri</option>
+            </select>
+            <label for="piloto2">Piloto 2</label>
+          </section>
+        </fieldset>
+
+        <button type="button" id="boton" onclick="mi_metodo()">Guardar</button>
+      </form>
+
+      <aside class="menu">
+        <h2>Menu</h2>
+        <p class="menu-subtitulo">NAVEGACIÓN</p>
+        <nav>
+          <ol>
+            <li>
+              <a href="index.html"
+                ><span class="material-symbols-outlined">home</span> Inicio</a
+              >
+            </li>
+            <li>
+              <a href="Autos.html"
+                ><span class="material-symbols-outlined"> directions_car </span>
+                Autos</a
+              >
+            </li>
+            <li>
+              <a href="Corredor.html"
+                ><span class="material-symbols-outlined">
+                  sports_motorsports
+                </span>
+                Corredores</a
+              >
+            </li>
+            <li>
+              <a href="Escuderia.html"
+                ><span class="material-symbols-outlined">groups</span>
+                Escuderías</a
+              >
+            </li>
+            <li class="seleccionado">
+              <a href="Relaciones.html">
+                <span class="material-symbols-outlined">account_tree</span
+                >Relaciones</a
+              >
+            </li>
+          </ol>
+        </nav>
+      </aside>
+    </main>
+
+    <footer>
+      <h2>Cruz Emmanuel Mejia Martinez</h2>
+      <p>LDSM 405</p>
+    </footer>
+
+    <script src="js/js-relaciones.js"></script>
+  </body>
+</html>
