@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Cruz Emmanuel Mejia Martinez" />
+    <meta name="keywords" content="Desarrollo web, ingenieria de software" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css" />
+    <title>Escuderia</title>
+  </head>
+  <body>
+    <header>
+      <h1>Escuderia</h1>
+    </header>
+
+    <main>
+      <form
+        id="Escuderia"
+        name="datos_usuario"
+        method="post"
+        action="#"
+        enctype="multipart/form-data"
+      >
+        <label>Nombre de Escudería</label>
+        <input type="text" id="modelo" />
+
+        <label>Descripcion:</label>
+        <input type="text" id="descripcion" />
+
+        <button type="button" id="boton" onclick="mi_metodo()">Guardar</button>
+      </form>
+
+      <aside class="menu">
+        <h2>Menu</h2>
+        <p class="menu-subtitulo">NAVEGACIÓN</p>
+        <nav>
+          <ol>
+            <li>
+              <a href="index.html"
+                ><span class="material-symbols-outlined">home</span> Inicio</a
+              >
+            </li>
+            <li>
+              <a href="Autos.html"
+                ><span class="material-symbols-outlined"> directions_car </span>
+                Autos</a
+              >
+            </li>
+            <li>
+              <a href="Corredor.html"
+                ><span class="material-symbols-outlined">
+                  sports_motorsports
+                </span>
+                Corredores</a
+              >
+            </li>
+            <li class="seleccionado">
+              <a href="Escuderia.html"
+                ><span class="material-symbols-outlined">groups</span>
+                Escuderías</a
+              >
+            </li>
+            <li>
+              <a href="Relaciones.html">
+                <span class="material-symbols-outlined">account_tree</span
+                >Relaciones</a
+              >
+            </li>
+          </ol>
+        </nav>
+      </aside>
+    </main>
+
+    <footer>
+      <h2>Cruz Emmanuel Mejia Martinez</h2>
+      <p>LDSM 405</p>
+    </footer>
+
+    <script src="js/js-escuderia.js"></script>
+  </body>
+</html>
