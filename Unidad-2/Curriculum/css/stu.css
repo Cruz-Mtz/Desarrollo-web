@@ -1,0 +1,345 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  color: #111111;
+  padding-top: 70px;
+  cursor: crosshair;
+
+  /* HALFTONE FONDO */
+  background-color: #e9dfec;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.16) 2px, transparent 1.6px);
+  background-size: 7px 7px;
+  /*Utilice IA para hacer este efecto halftone*/
+}
+
+/* NAVBAR */
+
+nav {
+  background-color: #0a0a0a;
+}
+
+.navbar-brand {
+  font-family: "Anton", sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* TIPOGRAFÍA Y TITULARES */
+
+h1,
+h2,
+h3 {
+  font-family: "Anton", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(3.8rem, 14vw, 9rem);
+  line-height: 0.9;
+  color: #e10600;
+  -webkit-text-stroke: 2px #000000; /* Borde negro para texto */
+  text-shadow: 6px 6px 0 #000000;
+}
+
+h2 {
+  display: inline-block;
+  line-height: 1;
+  padding-bottom: 6px;
+}
+
+h3 {
+  color: inherit;
+  letter-spacing: 1px;
+}
+
+p {
+  line-height: 1.7;
+}
+
+small {
+  color: #e10600;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+a {
+  color: #e10600;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+}
+
+mark {
+  display: inline-block;
+  padding: 2px 12px;
+  background-color: #e10600;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h1 mark {
+  margin-top: 14px;
+  font-family: "Anton", sans-serif;
+  font-size: 0.28em;
+  font-weight: 400;
+  background-color: #000000;
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+}
+
+/* Código de barras estilo filtro */
+hr {
+  width: 180px;
+  height: 44px;
+  margin: 20px 0;
+  opacity: 1;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #000000 0px,
+    #000000 2px,
+    transparent 2px,
+    transparent 5px,
+    #000000 5px,
+    #000000 6px,
+    transparent 6px,
+    transparent 10px,
+    #000000 10px,
+    #000000 14px,
+    transparent 14px,
+    transparent 16px
+  );
+}
+
+/* SECCIONES Y FONDOS  */
+
+/* Reemplazo directo de section:nth-of-type(even) por una clase clara */
+.seccion-oscura {
+  background-color: #0a0a0a;
+  background-image: radial-gradient(
+    rgba(225, 6, 0, 0.45) 1px,
+    transparent 1.6px
+  );
+  background-size: 9px 9px;
+  color: #f4f1ea;
+}
+
+.seccion-oscura h2 {
+  color: #ffffff;
+}
+
+/* Franjas rojas decorativas */
+aside {
+  margin: 28px -20px;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #e10600;
+  border-top: 3px solid #000000;
+  border-bottom: 3px solid #000000;
+  transform: rotate(-1.5deg);
+}
+
+aside p {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* VENTANAS RETRO  */
+
+figure,
+article {
+  background-color: #c0c0c0;
+  border: 2px solid #000000;
+  box-shadow: 8px 8px 0 #000000;
+}
+
+figure {
+  padding: 3px;
+  transform: rotate(-1.5deg);
+}
+
+.foto-inclinada {
+  transform: rotate(1.5deg) !important;
+}
+
+/* Barra azul de título */
+figcaption,
+article header,
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  background-image: linear-gradient(90deg, #000080, #1084d0);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+figcaption {
+  margin-bottom: 3px;
+}
+
+/* Ajuste de imagen para llenar la ventana .exe completa */
+.foto-pantalla {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* SOBRE MÍ */
+
+dt {
+  padding-top: 10px;
+  color: #ff3b2f;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-top: 1px dashed #777777;
+}
+
+dd {
+  padding-top: 10px;
+  border-top: 1px dashed #777777;
+}
+
+/* HERRAMIENTAS / STICKERS DE COLORES */
+
+li article {
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0 #000000;
+}
+
+.rojo {
+  background-color: #e10600;
+  color: #ffffff;
+  transform: rotate(-1.5deg);
+}
+
+.amarillo {
+  background-color: #ffd400;
+  color: #000000;
+  transform: rotate(1.5deg);
+}
+
+.azul {
+  background-color: #2b3cff;
+  color: #ffffff;
+  transform: rotate(-1deg);
+}
+
+li article span {
+  display: block;
+  font-family: "Anton", sans-serif;
+  font-size: 4rem;
+  line-height: 1;
+}
+
+/* PROYECTOS Y TARJETAS */
+
+article img {
+  border-bottom: 2px solid #000000;
+  filter: grayscale(1) contrast(1.15);
+  transition: filter 0.3s;
+}
+
+article img:hover {
+  filter: none;
+}
+
+/* HISTORIAL Y FRANJA */
+
+ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+ol li {
+  margin-bottom: 36px;
+}
+
+time {
+  display: inline-block;
+  padding: 2px 10px;
+  background-color: #000000;
+  color: #ffd400;
+  font-weight: 700;
+}
+
+blockquote {
+  margin: 0;
+  padding-left: 24px;
+  border-left: 10px solid #e10600;
+}
+
+blockquote p {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(2rem, 7vw, 5rem);
+  line-height: 1.05;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+blockquote footer {
+  color: #ffd400;
+  font-weight: 700;
+}
+
+/* CONTACTO Y BOTONES */
+
+address {
+  font-size: 1.1rem;
+  line-height: 2.4;
+}
+
+.correo-destacado {
+  padding: 0 10px;
+  background-color: #ffd400;
+  color: #000000;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(1.6rem, 6vw, 3.6rem);
+  font-weight: 400;
+  box-shadow: 5px 5px 0 #000000;
+}
+
+button {
+  box-shadow: 4px 4px 0 #000000;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* 
+   FOOTER
+    */
+
+footer {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer hr {
+  margin: 0 auto 16px auto;
+  filter: invert(1);
+}

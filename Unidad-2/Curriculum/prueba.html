@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio personal de Cruz Mejía: desarrollo de software, proyectos y cultura visual.">
+
+  <title>Cruz Mejía | CV</title>
+
+  <!-- Fuentes: Anton y Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS & JS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="css/stu.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR FIJA -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+      <div class="container">
+
+        <a class="navbar-brand" href="#inicio">★ CRUZ MEJÍA</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+          aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#yo">Sobre mí</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#Herramientas">HERRAMIENTAS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#proyectos">PROYECTOS</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#historial">HISTORIAL</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">CONTACTO</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="inicio" class="py-5">
+      <div class="container">
+
+        <div class="row align-items-center g-5">
+
+          <div class="col-lg-7">
+
+            <p class="mb-2">
+              <small>★ CV - 2026</small>
+            </p>
+
+            <h1 class="mb-4">
+              Cruz Mejía<br>
+              <mark>En proceso.</mark>
+            </h1>
+
+            <p class="lead mb-4">
+              Estudiante de desarrollo de software, aprendiendo a convertir
+              ideas en cosas reales. Entre código, música, diseño visual
+              y una que otra obsesión que no pienso soltar.
+            </p>
+
+            <a href="#proyectos" class="btn btn-danger btn-lg px-4 me-2 mb-2">
+              Explora mis proyectos ↓
+            </a>
+
+            <button type="button" class="btn btn-dark btn-lg px-4 mb-2" data-bs-toggle="modal"
+              data-bs-target="#modalContacto">
+              Hablemos
+            </button>
+
+            <hr>
+
+          </div>
+
+          <div class="col-lg-5">
+
+            <figure>
+
+              <figcaption>
+                <span>mis_fotos.exe</span>
+                <span>_ □ ✕</span>
+              </figcaption>
+
+              <div id="carruselHero" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
+                  <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+                  <button type="button" data-bs-target="#carruselHero" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/pfp.jpg" class="d-block w-100 img-fluid foto-pantalla" alt="Fotografía personal de Cruz Mejía">
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="https://placehold.co/700x700/e10600/000000?text=VISUAL+ARCHIVE" class="d-block w-100 img-fluid foto-pantalla" alt="Collage de referencias visuales">
+                  </div>
+
+                  <div class="carousel-item">
+                    <img src="https://placehold.co/700x700/ffd400/000000?text=MY+WORLD" class="d-block w-100 img-fluid foto-pantalla" alt="Imagen que representa mis intereses">
+                  </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselHero" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselHero" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
+
+              </div>
+            </figure>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FRANJA PERSONAL -->
+    <aside aria-label="Lo que me define">
+      <p>
+        ★ DESARROLLO ★ DISEÑO GRÁFICO ★ DESARROLLO ★ DISEÑO GRÁFICO ★ DESARROLLO ★ DISEÑO GRÁFICO ★
+      </p>
+    </aside>
+
+    <!-- SOBRE MÍ (SECCIÓN OSCURA) -->
+    <section id="yo" class="py-5 seccion-oscura">
+      <div class="container">
+
+        <div class="row align-items-center g-5">
+
+          <div class="col-md-5">
+
+            <figure class="foto-inclinada">
+
+              <figcaption>
+                <span>cruz.exe</span>
+                <span>_ □ ✕</span>
+              </figcaption>
+
+              <img src="img/Cruz.jpg" class="img-fluid foto-pantalla" alt="Fotografía personal de Cruz Mejía">
+
+            </figure>
+
+          </div>
+
+          <div class="col-md-7">
+
+            <h2 class="mb-3">SOBRE MÍ</h2>
+
+            <p class="mb-3">
+              <mark>★ ACCESO CONCEDIDO★</mark>
+            </p>
+
+            <p class="mb-4">
+              Todavía estoy descubriendo todo lo que puedo hacer.
+              Por ahora, estoy aprendiendo a programar, creando proyectos
+              y construyendo mi propia forma de expresarme.
+            </p>
+
+            <dl class="row mb-4">
+
+              <dt class="col-sm-4">Nombre</dt>
+              <dd class="col-sm-8">Cruz Emmanuel Mejía Martínez</dd>
+
+              <dt class="col-sm-4">Actualmente</dt>
+              <dd class="col-sm-8">Estudiante de desarrollo de software (UTL)</dd>
+
+              <dt class="col-sm-4">En repeat</dt>
+              <dd class="col-sm-8">Metalcore & Synthwave Playlist</dd>
+
+              <dt class="col-sm-4">En mi cabeza</dt>
+              <dd class="col-sm-8">Ideas, diseños y proyectos por hacer</dd>
+
+              <dt class="col-sm-4">Juego Favorito</dt>
+              <dd class="col-sm-8">Outer Wilds</dd>
+
+              <dt class="col-sm-4">Current obsession</dt>
+              <dd class="col-sm-8">Diseño visual, streetwear y estética Y2K</dd>
+
+            </dl>
+
+            <button type="button" class="btn btn-danger px-4" data-bs-toggle="modal" data-bs-target="#modalMas">
+              Abrir archivos personales
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HERRAMIENTAS -->
+    <section id="Herramientas" class="py-5">
+      <div class="container">
+
+        <h2 class="mb-3">HERRAMIENTAS</h2>
+
+        <p class="mb-5">
+          No soy experto en todo. Estoy aprendiendo, practicando
+          y descubriendo cómo hacer que mis ideas funcionen.
+        </p>
+
+        <ul class="row row-cols-1 row-cols-md-3 g-4 list-unstyled">
+
+          <li class="col">
+            <article class="h-100 p-4 rojo">
+              <span aria-hidden="true">01</span>
+              <h3 class="h4">Desarrollo Web</h3>
+              <p class="mb-0">
+                HTML, CSS y Bootstrap. Aprendiendo a construir páginas
+                responsivas, cuidar los detalles y darles personalidad.
+              </p>
+            </article>
+          </li>
+
+          <li class="col">
+            <article class="h-100 p-4 amarillo">
+              <span aria-hidden="true">02</span>
+              <h3 class="h4">Programación</h3>
+              <p class="mb-0">
+                Java, C++ y Kotlin. Practicando la lógica, POO, estructuras de datos y resolución de problemas.
+              </p>
+            </article>
+          </li>
+
+          <li class="col">
+            <article class="h-100 p-4 azul">
+              <span aria-hidden="true">03</span>
+              <h3 class="h4">Dirección creativa</h3>
+              <p class="mb-0">
+                Prototipado en Figma, diseño de identidades  y experiencias interactivas 3D.
+              </p>
+            </article>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- FRANJA DECORATIVA -->
+    <aside aria-label="Separador">
+      <p>
+        ★ Archivo de proyectos ★  Archivo de proyectos ★
+      </p>
+    </aside>
+
+    <!-- PROYECTOS (SECCIÓN OSCURA) -->
+    <section id="proyectos" class="py-5 seccion-oscura">
+      <div class="container">
+
+        <h2 class="mb-3">PROYECTOS SELECCIONADOS</h2>
+
+        <p class="mb-5">
+          Proyectos académicos, prácticas de programación y experimentos
+          visuales. Todo forma parte de mi proceso de aprendizaje.
+        </p>
+
+        <div class="row g-4">
+
+          <!-- KINDISH -->
+          <div class="col-lg-6">
+            <article class="card h-100">
+              <header>
+                <span>Kindish.exe</span>
+                <span>_ □ ✕</span>
+              </header>
+
+              <img src="img/Logo_Kindish.png" class="card-img-top img-fluid foto-pantalla" alt="Vista previa del proyecto KinDish">
+
+              <section class="card-body">
+                <p class="mb-1">
+                  <small>PROYECTO 01 · DESARROLLO WEB / SOFTWARE</small>
+                </p>
+
+                <h3 class="card-title h4">KinDish</h3>
+
+                <p class="card-text">
+                  Plataforma web enfocada en la gestión y redistribución de excedentes de comida.
+                  Un sistema diseñado para reducir el desperdicio de alimentos y optimizar la logística.
+                </p>
+
+                <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalProyecto1">
+                  Ver proyecto →
+                </button>
+              </section>
+            </article>
+          </div>
+
+          <!-- F1 -->
+          <div class="col-lg-6">
+            <article class="card h-100">
+              <header>
+                <span>f1.exe</span>
+                <span>_ □ ✕</span>
+              </header>
+
+              <img src="img/formula-1-logo.png" class="card-img-top img-fluid foto-pantalla" alt="Vista previa de F1">
+
+              <div class="card-body">
+                <p class="mb-1">
+                  <small>PROYECTO 02 · DESARROLLO WEB</small>
+                </p>
+
+                <h3 class="card-title h4">F1 Visual Experience</h3>
+
+                <p class="card-text">
+                  Prácticas de diseño web inspiradas en la Fórmula 1,
+                  explorando paletas de color, tipografía e interacción DOM con JavaScript.
+                </p>
+
+                <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalProyecto2">
+                  Ver proyecto →
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- DEV LAUNCH -->
+          <div class="col-lg-4">
+            <article class="card h-100">
+              <header>
+                <span>devlaunch.exe</span>
+                <span>_ □ ✕</span>
+              </header>
+
+              <img src="img/Logo_DevLaunch.png" class="card-img-top img-fluid foto-pantalla p-3" alt="Logo de DevLaunch">
+
+              <div class="card-body">
+                <p class="mb-1">
+                  <small>PROYECTO 03 · FREELANCE</small>
+                </p>
+
+                <h3 class="card-title h4">DevLaunch</h3>
+
+                <p class="card-text">
+                  Plataforma para desarrolladores independientes y freelancers para mostrar sus proyectos a patrocinadores.
+                </p>
+
+                <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalDevLaunch">
+                  Ver proyecto →
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- DELIGHTEX MUSEO -->
+          <div class="col-lg-8">
+            <article class="card h-100">
+              <header>
+                <span>virtual_museum.exe</span>
+                <span>_ □ ✕</span>
+              </header>
+
+              <img src="img/Delightext.png" class="card-img-top img-fluid foto-pantalla" alt="Vista previa Museo Virtual">
+
+              <div class="card-body">
+                <p class="mb-1">
+                  <small>PROYECTO 04 · 3D DESIGN / INTERACTIVE</small>
+                </p>
+
+                <h3 class="card-title h4">Museo Virtual Interactivo</h3>
+
+                <p class="card-text">
+                  Entorno 3D interactivo desarrollado en Delightex representando metas personales a corto, mediano y largo plazo en espacios liminales.
+                </p>
+
+                <button type="button" class="btn btn-dark btn-sm" data-bs-toggle="modal" data-bs-target="#modalMuseo">
+                  Ver proyecto →
+                </button>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORIAL -->
+    <section id="historial" class="py-5">
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-4">
+            <h2 class="mb-3">Mi historial</h2>
+            <p>
+              Mi recorrido hasta ahora: lo que estudio, lo que practico
+              y las cosas que voy aprendiendo en el camino.
+            </p>
+          </div>
+
+          <div class="col-lg-8">
+            <ol>
+              <li>
+                <time datetime="2026">2026 – Actualidad</time>
+                <h3 class="h4">Desarrollo de software</h3>
+                <p><small>Universidad Tecnológica de León (UTL)</small></p>
+                <p>
+                  Formación académica en programación, maquetación semántica, bases de datos relacionales en MySQL y construcción de aplicaciones.
+                </p>
+              </li>
+
+              <li>
+                <time datetime="2025">2025 – Actualidad</time>
+                <h3 class="h4">Proyectos & Práctica Académica</h3>
+                <p>
+                  Desarrollo de ejercicios y aplicaciones web con HTML, CSS, Bootstrap, Java y Kotlin, con control de versiones en Git y GitHub Pages.
+                </p>
+              </li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FRASE (SECCIÓN OSCURA) -->
+    <section id="frase" class="py-5 seccion-oscura">
+      <blockquote class="container text-center">
+        <p>“Todavía estoy descubriéndolo. Todavía haciéndolo mío.”</p>
+        <footer>— Cruz Mejía</footer>
+      </blockquote>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-5">
+      <div class="container text-center">
+
+        <h2 class="mb-3">HABLEMOS</h2>
+
+        <p class="mb-4">
+          ¿Tienes un proyecto interesante, una idea o simplemente
+          quieres conocer lo que estoy haciendo? Aquí me encuentras.
+        </p>
+
+        <address class="mb-4">
+          <a href="mailto:cruzemmtz@gmail.com" class="correo-destacado">
+            cruzemmtz@gmail.com
+          </a>
+          <br><br>
+
+          <a href="https://github.com" target="_blank">GitHub</a> ★
+          <a href="https://www.instagram.com/cru_mtz_" target="_blank">Instagram</a>
+        </address>
+
+        <button type="button" class="btn btn-dark btn-lg px-5" data-bs-toggle="modal" data-bs-target="#modalContacto">
+          Enviar mensaje
+        </button>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-4">
+    <div class="container">
+      <hr>
+      <p class="mb-0">
+        ★ CRUZ EMMANUEL MEJÍA MARTÍNEZ ★ CURRICULUM ★ LDSM 405 ★
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============ MODALES DE PROYECTOS Y SOBRE MÍ ============ -->
+
+  <!-- MODAL KINDISH -->
+  <div class="modal fade" id="modalProyecto1" tabindex="-1" aria-labelledby="tituloProyecto1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <header class="modal-header" data-bs-theme="dark">
+          <h3 class="modal-title h5" id="tituloProyecto1">kindish_details.txt</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </header>
+        <div class="modal-body">
+          <img src="img/Logo_Kindish.png" class="img-fluid mb-3 foto-pantalla" alt="KinDish">
+          <p><strong>KinDish</strong> es una plataforma de gestión de alimentos enfocada en conectar establecimientos con excedentes de comida con comedores y beneficiarios en León, Gto.</p>
+          <p>Garantiza el cumplimiento de normas COFEPRIS para la trazabilidad e inocuidad alimentaria.</p>
+        </div>
+        <footer class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL F1 -->
+  <div class="modal fade" id="modalProyecto2" tabindex="-1" aria-labelledby="tituloProyecto2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <header class="modal-header" data-bs-theme="dark">
+          <h3 class="modal-title h5" id="tituloProyecto2">f1_details.txt</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </header>
+        <div class="modal-body">
+          <img src="img/formula-1-logo.png" class="img-fluid mb-3 foto-pantalla" alt="F1">
+          <p>Proyecto web temático sobre Fórmula 1 desarrollado con HTML semántico, CSS personalizado y funciones interactivas en JavaScript.</p>
+        </div>
+        <footer class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DEVLAUNCH -->
+  <div class="modal fade" id="modalDevLaunch" tabindex="-1" aria-labelledby="tituloDevLaunch" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <header class="modal-header" data-bs-theme="dark">
+          <h3 class="modal-title h5" id="tituloDevLaunch">devlaunch_details.txt</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </header>
+        <div class="modal-body">
+          <img src="img/Logo_DevLaunch.png" class="img-fluid mb-3 foto-pantalla p-3" alt="DevLaunch">
+          <p>Plataforma freelance para que desarrolladores presenten proyectos en progreso a patrocinadores e inversionistas.</p>
+        </div>
+        <footer class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL MUSEO VIRTUAL -->
+  <div class="modal fade" id="modalMuseo" tabindex="-1" aria-labelledby="tituloMuseo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <header class="modal-header" data-bs-theme="dark">
+          <h3 class="modal-title h5" id="tituloMuseo">virtual_museum_details.txt</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </header>
+        <div class="modal-body">
+          <img src="img/Delightext.png" class="img-fluid mb-3 foto-pantalla" alt="Museo Virtual">
+          <p>Recorrido 3D interactivo diseñado en Delightex en un entorno de espacios liminales y temáticos para exponer metas personales.</p>
+        </div>
+        <footer class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CONTACTO -->
+  <div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="tituloContacto" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <header class="modal-header" data-bs-theme="dark">
+          <h3 class="modal-title h5" id="tituloContacto">mensaje_nuevo.exe</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </header>
+
+        <form id="formContacto" action="#" method="post">
+          <div class="modal-body">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" id="nombre" name="nombre" class="form-control mb-3" required placeholder="Tu nombre">
+
+            <label for="correo" class="form-label">Correo</label>
+            <input type="email" id="correo" name="correo" class="form-control mb-3" required placeholder="correo@ejemplo.com">
+
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" class="form-control" required placeholder="Cuéntame tu idea..."></textarea>
+          </div>
+
+          <footer class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-danger">Enviar</button>
+          </footer>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL HISTORIA PERSONAL -->
+  <div class="modal fade" id="modalMas" tabindex="-1" aria-labelledby="tituloMas" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <header class="modal-header" data-bs-theme="dark">
+          <h3 class="modal-title h5" id="tituloMas">historia_personal.txt</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </header>
+        <div class="modal-body">
+          <p>Estudiante de desarrollo de software multiplataforma.</p>
+        </div>
+        <footer class="modal-footer">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cerrar</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
