@@ -1,147 +1,138 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRZ | Prácticas & Proyectos</title>
 
-    <title>Mi página web</title>
+    <!-- Fuente Y2K/Editorial limpia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
 
     <style>
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #08090D;
-            color: #EEEEEE;
-            text-align: center;
-            margin: 0;
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0f0f10;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 24px;
         }
 
-        header {
-            background-color: #FCEE0A;
-            color: #08090D;
-            padding: 30px;
-            border-bottom: 3px solid #FF2A6D;
-        }
-
-        header h1 {
-            margin: 0;
-        }
-
+        /* TARJETA PRINCIPAL CON EFECTO STICKER / BRUTALISTA */
         main {
-            background-color: #0F1117;
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 25px;
-            border: 1px solid #2A2C36;
+            width: 100%;
+            max-width: 520px;
+            background-color: #161618;
+            border: 2px solid #ffffff;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 6px 6px 0px #e10600; /* Sombra sólida roja */
         }
 
-        h2 {
-            color: #FCEE0A;
+        h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
         }
 
         p {
-            color: #EEEEEE;
+            color: #aaaaaa;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            margin-bottom: 28px;
         }
 
-        section {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #14161D;
-            border-left: 4px solid #FF2A6D;
-            border-right: 4px solid #FCEE0A;
+        h2 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #666666;
+            margin-bottom: 14px;
         }
 
-        ol {
-            display: inline-block;
-            text-align: left;
-            padding-left: 25px;
+        /* LISTA DE PRÁCTICAS */
+        ul {
+            list-style: none;
+            margin-bottom: 28px;
         }
 
         li {
-            margin: 10px 0;
+            margin-bottom: 12px;
         }
 
         a {
-            color: #00E5FF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 18px;
+            background-color: #0f0f10;
+            border: 1.5px solid #333333;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
         }
 
+        /* HOVER TIPO STICKER/CYBER */
         a:hover {
-            color: #FCEE0A;
+            border-color: #ffffff;
+            background-color: #ffffff;
+            color: #000000;
+            transform: translate(-3px, -3px);
+            box-shadow: 4px 4px 0px #e10600;
         }
 
         footer {
-            background-color: #08090D;
-            color: #F2F2F4;
-            padding: 20px;
-            border-top: 2px solid #2A2C36;
-            margin-top: 30px;
+            margin-top: 24px;
+            font-size: 0.75rem;
+            color: #555555;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
-
     </style>
-
 </head>
 
 <body>
 
-    <header>
-
-        <h1>Bienvenido a mi página web</h1>
-
-    </header>
-
     <main>
+        <h1>Desarrollo Web</h1>
+        <p>Bienvenido. Índice central para acceder de forma rápida a todas las prácticas y entregas de la materia.</p>
 
-        <h2>Bienvenido</h2>
-
-        <p>
-            Esta página es para la escuela y materia de Desarrollo
-            web, espero que les guste y sea de su agrado.
-        </p>
-
-        <section>
-
-            <h2>Unidad 2</h2>
-
-            <ol>
-
-                <li>
-                    <a href="Unidad-1/Puntuacion-1/index.html">
-                        Puntuación 1
-                    </a>
-                </li>
-                <li>
-                    <a href="Unidad-2/Practica-2/index.html">
-                        Practica 2
-                    </a>
-                </li>
-                <li>
-                    <a href="Unidad-2/Curriculum/index.html">
-                        CV
-                    </a>
-                </li>
-
-            </ol>
-
-        </section>
-
-        <h2>Herramientas</h2>
-
-        <p>
-            Estas son algunas de las herramientas que utilizo
-            para el desarrollo web.
-        </p>
+        <h2>Unidad 2 — Prácticas</h2>
+        <ul>
+            <li>
+                <a href="Unidad-1/Puntuacion-1/index.html">
+                    <span>01. Puntuación 1</span>
+                </a>
+            </li>
+            <li>
+                <a href="Unidad-2/Practica-2/index.html">
+                    <span>02. Práctica 2</span>
+                </a>
+            </li>
+            <li>
+                <a href="cv/index.html">
+                    <span>03. CV / Portafolio</span>
+                </a>
+            </li>
+        </ul>
 
     </main>
 
     <footer>
-
-        Desarrollo por: Cruz Mejia
-
+        CRUZ MEJÍA — 2026
     </footer>
 
 </body>
