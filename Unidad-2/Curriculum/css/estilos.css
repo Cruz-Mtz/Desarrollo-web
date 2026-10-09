@@ -129,8 +129,6 @@ hr {
 }
 
 /* SECCIONES Y FONDOS  */
-
-/* Reemplazo directo de section:nth-of-type(even) por una clase clara */
 .seccion-oscura {
   background-color: #0a0a0a;
   background-image: radial-gradient(
