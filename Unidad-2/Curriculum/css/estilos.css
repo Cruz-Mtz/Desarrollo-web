@@ -324,7 +324,6 @@ address {
 }
 
 button {
-  box-shadow: 4px 4px 0 #000000;
   text-transform: uppercase;
   font-weight: 700;
 }
