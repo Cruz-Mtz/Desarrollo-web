@@ -1,0 +1,265 @@
+body {
+    background-color: #faf7f2;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #1f2430;
+    margin: 0;
+}
+
+.encabezado {
+    background-color: #14213d;
+    color: #ffffff;
+    text-align: center;
+    padding: 64px 20px 110px 20px;
+    border-bottom: 4px solid #c9a24b;
+}
+
+.encabezado-etiqueta {
+    display: inline-block;
+    margin: 0 0 14px 0;
+    padding: 4px 16px;
+    border: 1px solid #c9a24b;
+    border-radius: 20px;
+    color: #c9a24b;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.encabezado h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.encabezado-texto {
+    color: #cfd5e2;
+    font-weight: 300;
+    margin: 0;
+}
+
+.contenido {
+    margin-top: -60px;
+    margin-bottom: 50px;
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    border: 1px solid #ebe4d6;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 8px 24px rgba(20, 33, 61, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 32px rgba(20, 33, 61, 0.12);
+}
+
+#formRegistro section:nth-child(1) .tarjeta {
+    animation-delay: 0.2s;
+}
+
+#formRegistro section:nth-child(2) .tarjeta {
+    animation-delay: 0.4s;
+}
+
+#formRegistro section:nth-child(3) .tarjeta {
+    animation-delay: 0.6s;
+}
+
+.tarjeta-titulo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 22px 0;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #14213d;
+}
+
+.paso {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #c9a24b;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4a5163;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid #ddd5c4;
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem;
+    background-color: #fdfcfa;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: #ffffff;
+    border-color: #c9a24b;
+    box-shadow: 0 0 0 4px rgba(201, 162, 75, 0.2);
+}
+
+.tabla-habitaciones {
+    margin-bottom: 0;
+}
+
+.tabla-habitaciones th {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #8a8fa0;
+    border-bottom: 2px solid #ebe4d6;
+}
+
+.tabla-habitaciones tbody th {
+    font-size: 1rem;
+    text-transform: none;
+    letter-spacing: 0;
+    color: #14213d;
+}
+
+.tabla-habitaciones tbody tr {
+    transition: background-color 0.25s ease;
+}
+
+.tabla-habitaciones tbody tr:hover {
+    background-color: #faf4e6;
+}
+
+.badge-price {
+    font-weight: 700;
+    color: #a67c1c;
+}
+
+.agregar {
+    margin-top: 12px;
+}
+
+.btn-anadir {
+    background-color: transparent;
+    color: #14213d;
+    border: 2px solid #14213d;
+    border-radius: 10px;
+    padding: 0.6rem 1rem;
+    font-weight: 600;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-anadir:hover {
+    background-color: #14213d;
+    color: #ffffff;
+    border-color: #14213d;
+    transform: translateY(-2px);
+}
+
+.btn-anadir:active {
+    transform: translateY(0);
+}
+
+
+.seleccionadas {
+    margin-top: 26px;
+}
+
+.seleccionadas h3 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #8a8fa0;
+    margin: 0 0 8px 0;
+}
+
+#listaHabitacion:empty::before {
+    content: "Aún no has añadido habitaciones";
+    display: block;
+    padding: 16px;
+    border: 1px dashed #ddd5c4;
+    border-radius: 10px;
+    text-align: center;
+    color: #a0a4b0;
+    font-size: 0.9rem;
+}
+
+#listaHabitacion li {
+    background-color: transparent;
+    border-color: #ebe4d6;
+    padding: 12px 4px;
+    color: #14213d;
+    font-weight: 600;
+}
+
+.resumen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.resumen-nota {
+    margin: 0;
+}
+
+.resumen-nota small {
+    display: block;
+    color: #8a8fa0;
+}
+
+.resumen-nota strong {
+    color: #b3392f;
+}
+
+.btn-reservar {
+    background-color: #14213d;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.85rem 2rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 12px rgba(20, 33, 61, 0.25);
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-reservar:hover {
+    background-color: #c9a24b;
+    color: #14213d;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(201, 162, 75, 0.4);
+}
+
+.btn-reservar:active {
+    transform: translateY(0);
+}
+
+.pie {
+    text-align: center;
+    padding: 24px;
+    color: #8a8fa0;
+    font-size: 0.85rem;
+    border-top: 1px solid #ebe4d6;
+}
+
+.pie p {
+    margin: 0;
+}

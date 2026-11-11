@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Puntuacion-1-U3</title>
+</head>
+
+<body>
+    <h1>Ejercicio 1</h1>
+    <article>
+        <h2>Piezas por precio</h2>
+        <form action="" method="post" id="calculadora" name="calculadora">
+            <h3>Elija numeros para hacer cálculos</h3>
+            <p>No. Piezas</p>
+            <input type="text" name="pieza" id="pieza"><br>
+            <p>Precio</p>
+            <input type="text" name="precio" id="precio"><br>
+
+            <button type="button" onclick="calcular();" class="btn btn-warning" id="btnCalcular">Calcular</button>
+        </form>
+        <p class="alert alert-success" id="resultado"></p>
+    </article>
+
+    <p class="alert alert-success" id="resultado"></p>
+    <h1>Ejercicio 2</h1>
+    <article>
+        <h2>Sueldos</h2>
+        <form action="" method="post" id="calculadora" name="calculadora">
+            <h3>Elija numeros para hacer cálculos</h3>
+            <p>Sueldo</p>
+            <input type="text" name="sueldo" id="sueldo"><br>
+            <select id="operador2" size="1" name="operador2">
+                <option value="Soporte">1-Soporte 20%</option>
+                <option value="ProyectManger">2-Proyect Manager 40%</option>
+                <option value="ProgDr">3-Prog dr 25%</option>
+                <option value="ProgSr">4-Prog sr 35%</option>
+            </select>
+
+            <button type="button" onclick="CalcSueldo();" class="btn btn-warning" id="btnCalcular">Calcular
+                Sueldo</button>
+        </form>
+
+        <p class="alert alert-success" id="resultado2"></p>
+    </article>
+
+    <h1>Ejercicio 3</h1>
+    <article>
+        <h2>Calculadora</h2>
+        <form action="" method="post" id="calculadora" name="calculadora">
+            <h4>Elija numeros para hacer cálculos</h4>
+            <input type="text" name="n1" id="n1"><br>
+            <input type="text" name="n2" id="n2"><br>
+            <select id="operador3" size="1" name="operador3">
+                <option value="suma">+</option>
+                <option value="resta">-</option>
+                <option value="division">/</option>
+                <option value="multiplacion">*</option>
+                <option value="modulo">%</option>
+            </select>
+            <button type="button" onclick="Calc();" class="btn btn-warning" id="btnCalcular">Calcular</button>
+        </form>
+        <p class="alert alert-success" id="resultado3"></p>
+    </article>
+
+    <h1>Ejercicio 4</h1>
+    <article>
+        <h2>Numero Secreto</h2>
+        <form action="" method="post" id="calculadora" name="calculadora">
+
+            <h3>Número Secreto</h3>
+            <input type="text" id="numUsuario" name="n1">
+            <button type="button" onclick="adivinar();" class="btn btn-warning" id="btnCalcular">Adivinar</button>
+            <p id="mensajeJuego"></p>
+
+        </form>
+        <p class="alert alert-success" id="mensaje"></p>
+    </article>
+
+    <h1>Ejercicio 5</h1>
+    <article>
+        <h2>Tablitas</h2>
+        <form action="" method="post" id="calculadora" name="calculadora">
+
+            <h3>Calculadora de Tablas (Rango)</h3>
+            <input type="number" id="tablaInicio" placeholder="Tabla inicial">
+            <input type="number" id="tablaFin" placeholder="Tabla final">
+            <button type="button" onclick="Tablas();">Generar Tablas</button>
+
+            <div id="resultadoTablas"></div>
+
+        </form>
+        <p class="alert alert-success" id="mensaje"></p>
+    </article>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

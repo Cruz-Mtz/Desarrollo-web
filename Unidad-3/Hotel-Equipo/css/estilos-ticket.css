@@ -1,0 +1,334 @@
+body {
+  background-color: #14213d;
+  background-image: radial-gradient(circle at 50% 0%, #243a66 0%, #14213d 60%);
+  background-repeat: no-repeat;
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  min-height: 100vh;
+  padding: 30px 16px 40px 16px;
+  box-sizing: border-box;
+}
+
+.escena {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.impresora {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 420px;
+  height: 56px;
+  box-sizing: border-box;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(#4b5262, #2b303b);
+  border-radius: 14px 14px 6px 6px;
+  border-bottom: 3px solid #1a1d24;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  /* Vibra 40 veces de 0.1s = 4s, lo mismo que tarda el ticket en salir */
+  animation: vibrar 0.1s linear 40;
+}
+
+.impresora-nombre {
+  margin: 0;
+  color: #c9a24b;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.luz {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f0b429;
+  box-shadow: 0 0 8px #f0b429;
+  /* Parpadea 4s y luego se pone verde (0.3s de duración, 4s de espera) */
+  animation:
+    parpadeo 0.5s ease-in-out 8,
+    luz-lista 0.3s ease 4s forwards;
+}
+
+.ranura {
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 340px;
+  max-width: 84%;
+  height: 9px;
+  margin-left: -170px;
+  background-color: #0b0d12;
+  border-radius: 0 0 6px 6px;
+}
+
+.salida {
+  position: relative;
+  z-index: 1;
+  /* Recorta el ticket mientras está arriba: así parece salir de la ranura */
+  overflow: hidden;
+  padding: 0 30px 30px 30px;
+  margin-top: 2px;
+}
+
+.ticket {
+  position: relative;
+  width: 320px;
+  max-width: 100%;
+  box-sizing: border-box;
+  background-color: #fffdf9;
+  color: #111111;
+  padding: 28px 22px 26px 22px;
+  filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.4));
+  /* El ticket baja durante 4s; "both" mantiene su estado inicial y final */
+  animation: imprimir 4s ease-in-out both;
+}
+
+.ticket::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -9px;
+  width: 100%;
+  height: 10px;
+  background-image:
+    linear-gradient(135deg, #fffdf9 25%, transparent 25%),
+    linear-gradient(225deg, #fffdf9 25%, transparent 25%);
+  background-size: 14px 14px;
+  background-repeat: repeat-x;
+}
+
+.ticket-encabezado {
+  text-align: center;
+}
+
+.ticket-encabezado h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  padding-left: 0.35em;
+}
+
+.ticket-encabezado p {
+  margin: 4px 0 0 0;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #555555;
+}
+
+.mi_linea {
+  border: none;
+  border-top: 1px dashed #111111;
+  opacity: 1;
+  margin: 16px 0;
+}
+
+.linea-detalle {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.85rem;
+  margin: 7px 0;
+}
+
+.linea-detalle span {
+  text-align: right;
+}
+
+.ticket-habitaciones h2 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ticket-habitaciones ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.ticket-habitaciones li {
+  position: relative;
+  padding: 3px 0 3px 16px;
+}
+
+.ticket-habitaciones li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+}
+
+.total-destacado {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 2px solid #111111;
+}
+
+.ticket-pie {
+  text-align: center;
+  margin-top: 22px;
+}
+
+.barcode {
+  height: 46px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #111111 0px,
+    #111111 2px,
+    #fffdf9 2px,
+    #fffdf9 4px,
+    #111111 4px,
+    #111111 5px,
+    #fffdf9 5px,
+    #fffdf9 8px,
+    #111111 8px,
+    #111111 11px,
+    #fffdf9 11px,
+    #fffdf9 13px
+  );
+}
+
+.gracias {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin: 12px 0 0 0;
+  letter-spacing: 0.05em;
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 6px;
+  /* Empiezan invisibles y aparecen a los 4s, cuando termina de imprimirse */
+  opacity: 0;
+  animation: aparecer 0.8s ease 4s forwards;
+}
+
+.boton {
+  display: inline-block;
+  font-family: "Space Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: 2px solid #c9a24b;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.boton-claro {
+  background-color: transparent;
+  color: #c9a24b;
+}
+
+.boton-claro:hover {
+  background-color: #c9a24b;
+  color: #14213d;
+  transform: translateY(-3px);
+}
+
+.boton-dorado {
+  background-color: #c9a24b;
+  color: #14213d;
+}
+
+.boton-dorado:hover {
+  background-color: #e0bb67;
+  border-color: #e0bb67;
+  transform: translateY(-3px);
+}
+
+/* ANIMACIONES 
+las animaciones las pude lograr gracias a la IA claude
+*/
+
+/* El ticket baja desde arriba (oculto por .salida) hasta su lugar */
+@keyframes imprimir {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* La impresora se mueve 1px a la derecha y regresa */
+@keyframes vibrar {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(1px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* La luz baja de opacidad y regresa */
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* La luz cambia de ámbar a verde */
+@keyframes luz-lista {
+  to {
+    background-color: #4ade80;
+    box-shadow: 0 0 8px #4ade80;
+  }
+}
+
+/* Los botones pasan de invisibles a visibles */
+@keyframes aparecer {
+  to {
+    opacity: 1;
+  }
+}
+
+@media print {
+  body {
+    background: #ffffff;
+    padding: 0;
+  }
+
+  .impresora,
+  .acciones {
+    display: none;
+  }
+
+  .ticket {
+    animation: none;
+    filter: none;
+  }
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket de reservación</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/estilos-ticket.css">
+</head>
+
+<body>
+
+    <main class="escena">
+
+        <!-- La "impresora" de la que sale el ticket -->
+        <header class="impresora">
+            <span class="luz" aria-hidden="true"></span>
+            <p class="impresora-nombre">Imprimiendo ticket...</p>
+            <span class="ranura" aria-hidden="true"></span>
+        </header>
+
+        <div class="salida">
+            <article class="ticket card">
+
+                <header class="ticket-encabezado">
+                    <h1>HOTEL</h1>
+                    <p>Ticket de reservación</p>
+                </header>
+
+                <hr class="mi_linea">
+
+                <section class="ticket-datos" aria-label="Datos del cliente">
+                    <p class="linea-detalle">
+                        <strong>Cliente:</strong>
+                        <span id="salidaCliente">---</span>
+                    </p>
+
+                    <p class="linea-detalle">
+                        <strong>RFC:</strong>
+                        <span id="salidaRFC">---</span>
+                    </p>
+
+                    <p class="linea-detalle">
+                        <strong>Huéspedes:</strong>
+                        <span id="salidaHuespedes">---</span>
+                    </p>
+
+                    <p class="linea-detalle">
+                        <strong>Adultos:</strong>
+                        <span id="salidaAdultos">---</span>
+                    </p>
+
+                    <p class="linea-detalle">
+                        <strong>Niños:</strong>
+                        <span id="salidaNinos">---</span>
+                    </p>
+                </section>
+
+                <hr class="mi_linea">
+
+                <section class="ticket-habitaciones" aria-labelledby="titulo-reservadas">
+                    <h2 id="titulo-reservadas">Habitaciones reservadas:</h2>
+                    <ul id="salidaListaHabitaciones">
+                    </ul>
+                </section>
+
+                <hr class="mi_linea">
+
+                <section class="ticket-totales" aria-label="Totales">
+                    <p class="linea-detalle">
+                        <span>Subtotal:</span>
+                        <span id="salidaSubtotal">$0.00</span>
+                    </p>
+
+                    <p class="linea-detalle">
+                        <span>Costo extra:</span>
+                        <span id="salidaExtra">$0.00</span>
+                    </p>
+
+                    <p class="linea-detalle total-destacado">
+                        <span>Total a pagar:</span>
+                        <span id="salidaTotal">$0.00</span>
+                    </p>
+                </section>
+
+                <footer class="ticket-pie">
+                    <div class="barcode" aria-hidden="true"></div>
+                    <p class="gracias">¡Gracias por su preferencia!</p>
+                </footer>
+
+            </article>
+        </div>
+
+        <nav class="acciones" aria-label="Acciones del ticket">
+            <a href="index.html" class="boton boton-claro">Nueva reservación</a>
+            <button type="button" class="boton boton-dorado" onclick="window.print();">Imprimir</button>
+        </nav>
+
+    </main>
+
+    <script src="js/ticket.js"></script>
+
+</body>
+
+</html>
