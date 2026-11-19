@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#09090d">
+  <meta name="description" content="NOISE — descubre y administra tu biblioteca musical.">
+  <title>NOISE | Music Platform</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="vistaLogin" class="pantalla-login">
+    <div class="decoracion-login d-none d-lg-block">SUBE<br>EL<br>RUIDO<span>_</span></div>
+    <section class="tarjeta-login card">
+      <div class="marca-inicial">N<span>.</span></div>
+      <p class="texto-superior">SISTEMA DE BIBLIOTECA MUSICAL</p>
+      <h1>NOISE<span class="red">.</span></h1>
+      <p class="texto-atenuado mb-4">Tu biblioteca musical, en un solo lugar.</p>
+      <form id="formularioLogin">
+        <div class="mb-3">
+          <label for="usuario" class="form-label">Usuario</label>
+          <input id="usuario" class="form-control" autocomplete="username" placeholder="Ingresa tu usuario" required>
+        </div>
+        <div class="mb-3">
+          <label for="contrasena" class="form-label">Contraseña</label>
+          <input id="contrasena" class="form-control" type="password" autocomplete="current-password" placeholder="Ingresa tu contraseña" required>
+        </div>
+        <button class="btn btn-noise-primary w-100" type="submit">Iniciar sesión <span>↗</span></button>
+        <p id="errorLogin" class="mensaje-error mt-2 mb-0"></p>
+      </form>
+      <div class="caja-demo mt-4">
+        <strong>Accesos de demostración</strong>
+        <p>Administrador: <code>admin</code> / <code>admin123</code></p>
+        <p>Usuario: <code>usuario</code> / <code>user123</code></p>
+      </div>
+    </section>
+  </main>
+
+  <div id="vistaAplicacion" class="contenedor-app oculto">
+    <aside class="barra-lateral">
+      <a class="marca" href="#" id="inicioMarca">NOISE<span>.</span></a>
+      <p class="etiqueta-lateral">MENÚ PRINCIPAL</p>
+      <nav class="nav flex-column gap-2">
+        <button class="nav-link enlace-menu active text-start" data-vista="catalog"><span>▦</span> Catálogo</button>
+        <button class="nav-link enlace-menu solo-admin oculto text-start" data-vista="admin"><span>▤</span> Administración</button>
+      </nav>
+      <div class="pie-lateral">
+        <div class="perfil-mini">
+          <div class="avatar-usuario" id="avatarUsuario">N</div>
+          <div><strong id="usuarioLateral">Usuario</strong><small id="rolLateral">Cuenta</small></div>
+        </div>
+        <button id="botonCerrarSesion" class="nav-link enlace-menu cerrar-sesion text-start"><span>↪</span> Cerrar sesión</button>
+      </div>
+    </aside>
+
+    <main class="contenido-principal">
+      <header class="barra-superior d-flex flex-wrap justify-content-between align-items-end gap-3">
+        <div>
+          <p class="texto-superior">TU ESPACIO MUSICAL</p>
+          <h2 id="tituloPagina" class="mb-0">Catálogo musical</h2>
+        </div>
+        <div class="estado-superior"><span class="punto-estado"></span><span id="estadoConexion">Conectando API...</span></div>
+      </header>
+
+      <section id="vistaCatalogo" class="view">
+        <div class="portada-principal row align-items-center g-4">
+          <div class="col-lg-8">
+            <p class="texto-superior">DESCUBRE · EXPLORA · ESCUCHA</p>
+            <h1>La música que<br><span>te representa.</span></h1>
+            <p class="mb-0">Explora los álbumes guardados en la biblioteca de NOISE.</p>
+          </div>
+          <div class="col-lg-4 d-none d-md-flex justify-content-center">
+            <div class="arte-portada"><div class="disco-vinilo"><div></div></div></div>
+          </div>
+        </div>
+
+        <div class="encabezado-seccion d-flex justify-content-between align-items-end flex-wrap gap-3">
+          <div><p class="texto-superior">BIBLIOTECA</p><h3 class="mb-0">Álbumes disponibles</h3></div>
+          <span id="cantidadAlbumes" class="contador-albumes">0 álbumes</span>
+        </div>
+        <div class="barra-herramientas row g-2 mb-4">
+          <div class="col-md-8"><input id="buscarCatalogo" class="form-control" placeholder="Buscar por álbum o artista..."></div>
+          <div class="col-md-4"><select id="filtroGenero" class="form-select"><option value="">Todos los géneros</option></select></div>
+        </div>
+        <div id="rejillaCatalogo" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4"></div>
+        <p id="catalogoVacio" class="estado-vacio oculto">No hay álbumes todavía. El administrador puede agregar algunos desde el panel.</p>
+      </section>
+
+      <section id="vistaAdmin" class="view oculto">
+        <div class="intro-admin d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+          <div><p class="texto-superior">CENTRO DE CONTROL</p><h1>Administración<span class="red">.</span></h1><p class="texto-atenuado mb-0">Gestiona los álbumes de la biblioteca musical.</p></div>
+          <button id="botonAgregarAlbum" class="btn btn-noise-primary">＋ Nuevo álbum</button>
+        </div>
+        <div class="row g-3 rejilla-estadisticas mb-4">
+          <div class="col-md-4"><article class="tarjeta-estadistica h-100"><span>ÁLBUMES REGISTRADOS</span><strong id="totalAlbumes">0</strong><small>En la biblioteca</small></article></div>
+          <div class="col-md-4"><article class="tarjeta-estadistica h-100"><span>GÉNEROS</span><strong id="totalGeneros">0</strong><small>Estilos musicales</small></article></div>
+          <div class="col-md-4"><article class="tarjeta-estadistica h-100"><span>ESTADO DE API</span><strong id="estadoApi">—</strong><small>Conexión de datos</small></article></div>
+        </div>
+        <div class="contenedor-tabla card">
+          <div class="encabezado-tabla d-flex flex-wrap justify-content-between align-items-end gap-3">
+            <div><p class="texto-superior">GESTIÓN DE CONTENIDO</p><h3 class="mb-0">Inventario de álbumes</h3></div>
+            <input id="buscarAdmin" class="form-control busqueda-admin" placeholder="Buscar álbum...">
+          </div>
+          <div class="table-responsive">
+            <table class="table tabla-noise align-middle mb-0">
+              <thead><tr><th>ÁLBUM</th><th>ARTISTA</th><th>AÑO</th><th>GÉNERO</th><th>ACCIONES</th></tr></thead>
+              <tbody id="tablaAlbumes"></tbody>
+            </table>
+          </div>
+          <p id="adminVacio" class="estado-vacio oculto">No se encontraron álbumes.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="modalAlbum" class="modal-noise oculto" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="fondo-modal" data-close="true"></div>
+    <section class="tarjeta-modal card">
+      <div class="modal-header">
+        <div><p class="texto-superior">BIBLIOTECA NOISE</p><h2 id="tituloModal" class="mb-0">Nuevo álbum</h2></div>
+        <button id="cerrarModal" class="btn-close btn-close-white" aria-label="Cerrar"></button>
+      </div>
+      <form id="formularioAlbum">
+        <input type="hidden" id="idAlbum">
+        <div class="mb-3"><label for="nombreAlbum" class="form-label">Nombre del álbum *</label><input id="nombreAlbum" class="form-control" required maxlength="100" placeholder="Ej. Hybrid Theory"></div>
+        <div class="mb-3"><label for="nombreArtista" class="form-label">Artista *</label><input id="nombreArtista" class="form-control" required maxlength="100" placeholder="Ej. Linkin Park"></div>
+        <div class="row g-3 mb-3">
+          <div class="col-sm-4"><label for="anioAlbum" class="form-label">Año *</label><input id="anioAlbum" class="form-control" type="number" min="1900" max="2100" required placeholder="2000"></div>
+          <div class="col-sm-8"><label for="generoAlbum" class="form-label">Género *</label><input id="generoAlbum" class="form-control" required maxlength="50" placeholder="Nu Metal"></div>
+        </div>
+        <div class="mb-3"><label for="portadaAlbum" class="form-label">URL de portada</label><input id="portadaAlbum" class="form-control" type="url" placeholder="https://..."></div>
+        <div class="mb-3"><label for="descripcionAlbum" class="form-label">Descripción</label><textarea id="descripcionAlbum" class="form-control" rows="3" maxlength="400" placeholder="Una breve descripción del álbum..."></textarea></div>
+        <div class="mb-2"><label for="audioAlbum" class="form-label">URL de audio (opcional)</label><input id="audioAlbum" class="form-control" type="url" placeholder="https://...mp3"></div>
+        <small class="ayuda-campo">Puedes usar un enlace de audio propio o dejarlo vacío para buscar una vista previa disponible en iTunes.</small>
+        <p id="errorFormulario" class="mensaje-error mt-2"></p>
+        <div class="acciones-modal d-flex justify-content-end gap-2 mt-4">
+          <button type="button" id="cancelarModal" class="btn btn-noise-secondary">Cancelar</button>
+          <button type="submit" class="btn btn-noise-primary" id="botonGuardarAlbum">Guardar álbum</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <section id="barraReproductor" class="barra-reproductor oculto" aria-label="Reproductor de música">
+    <div class="pista-reproductor"><img id="portadaReproductor" src="" alt=""><div><strong id="tituloReproductor">Sin reproducción</strong><small id="artistaReproductor">Selecciona un álbum</small></div></div>
+    <div class="controles-reproductor">
+      <div class="botones-reproductor"><button id="reproductorAnterior" aria-label="Anterior">|◀</button><button id="reproductorPausar" class="boton-play-principal" aria-label="Reproducir">▶</button><button id="reproductorSiguiente" aria-label="Siguiente">▶|</button></div>
+      <div class="progreso-reproductor"><span id="tiempoActual">0:00</span><input id="barraProgreso" type="range" min="0" max="100" value="0"><span id="duracionAudio">0:00</span></div>
+    </div>
+    <div class="volumen-reproductor"><span>VOL.</span><input id="barraVolumen" type="range" min="0" max="1" step="0.01" value="0.8"></div>
+    <audio id="elementoAudio" preload="none"></audio>
+  </section>
+  <div id="avisoEmergente" class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
